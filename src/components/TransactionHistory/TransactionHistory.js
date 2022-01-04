@@ -15,11 +15,11 @@ export default function TransactionHistory ({items})
 
   <tbody>
       {
-          items.map(item => (
-            <tr key = {item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+          items.map(({id, type, amount, currency}) => (
+            <tr key = {id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
           </tr>
           ) ) }    
   </tbody>
@@ -28,7 +28,7 @@ export default function TransactionHistory ({items})
 }
 
 TransactionHistory.propType = {
-    type : PropTypes.string,
-    amount : PropTypes.number,
-    currency : PropTypes.string,
+    type : PropTypes.string.isRequired,
+    amount : PropTypes.number.isRequired,
+    currency : PropTypes.string.isRequired,
 }
