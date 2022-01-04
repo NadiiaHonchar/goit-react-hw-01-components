@@ -41,7 +41,6 @@
   },
   "homepage": "https://nadiiahonchar.github.io/goit-react-hw-01-components/",
   "devDependencies": {
-    "gh-pages":"^3.2.3"
-  
+    "gh-pages": "^3.2.3"
   }
 }
