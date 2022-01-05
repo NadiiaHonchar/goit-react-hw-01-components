@@ -27,8 +27,10 @@ export default function TransactionHistory ({items})
     )
 }
 
-TransactionHistory.propType = {
-    type : PropTypes.string.isRequired,
-    amount : PropTypes.number.isRequired,
-    currency : PropTypes.string.isRequired,
+TransactionHistory.propType = {    
+    items:PropTypes.arrayOf(PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired,
+      currency: PropTypes.string.isRequired,      
+  }))
 }
